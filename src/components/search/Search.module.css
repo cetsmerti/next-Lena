@@ -5,10 +5,14 @@
 	display: flex;
 }
 
+.linkButton {
+	width: 20%;
+}
+
 .button {
 	background: var(--primary);
 	color: white;
-	width: 20%;
+	width: 100%;
 }
 
 .button:hover {

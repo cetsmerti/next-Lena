@@ -4,6 +4,7 @@ import './globals.css'
 import { Providers } from './provider'
 export const metadata = {
   title: 'Pad project',
+  icons: null
 }
 export default function RootLayout({
   children,

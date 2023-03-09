@@ -9,9 +9,8 @@ import styles from './CardFilm.module.css'
 
 export const CardFilm = (): JSX.Element => {
 	const state = useAppSelector(state => state.film)
-	if (state.filmArray.length !== 0) {
+	if (state.filmArray.length >= 1) {
 		return (
-
 			<div className={styles.wrapper}>
 				{state.filmArray.map((item) => (
 					<Card key={(Math.random() * Math.pow(36, 6) | 0).toString(36)} className={styles.card}>
@@ -19,7 +18,7 @@ export const CardFilm = (): JSX.Element => {
 						<CardContent className={styles.info}>
 
 							<span>{item.Title}</span>
-							<div>Rate:{item.Ratings[2].Value}</div>
+							<div>Rate:{item?.Ratings[2]?.Value}</div>
 							<span>Year relis: {item.Released}</span>
 						</CardContent>
 					</Card>
@@ -27,7 +26,9 @@ export const CardFilm = (): JSX.Element => {
 
 			</div>
 		);
+	} else {
+		return (<div className={styles.loading} ><CircularProgress /></div>)
 	}
-	return (<div className={styles.loading} ><CircularProgress /></div>)
+	// return (<div className={styles.loading} ><CircularProgress /></div>)
 
 }
