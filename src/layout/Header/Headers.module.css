@@ -1,0 +1,17 @@
+.head {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	background: var(--primary);
+	justify-content: space-between;
+	color: white;
+	padding: 20px;
+	font-size: xx-large;
+	border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 765px) {
+	.head {
+		font-size: 20px;
+	}
+}

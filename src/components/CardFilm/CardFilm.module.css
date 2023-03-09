@@ -1,0 +1,41 @@
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.img {
+	min-width: 40px;
+	width: 100%;
+
+}
+
+.card {
+	min-height: 240px;
+	min-width: 250px;
+	width: 25%;
+	position: relative;
+	display: flex;
+	margin-top: 5px;
+
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+@media (max-width: 785px) {
+	.wrapper {
+
+		align-items: center;
+		flex-direction: column;
+	}
+}
